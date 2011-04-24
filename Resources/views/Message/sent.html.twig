@@ -13,7 +13,7 @@
                     You sent <a class="user" href="{{ path('fos_user_user_show', {"username": message.to.username}) }}">{{ message.to }}</a>
                     a message {{ message.createdAt|date }}
                 </span>
-                <a class="subject" href="{{ path('ornicar_message_message_show', {"id": message.id}) }}">{{ message.subject }}</a>
+                <a class="subject" href="{{ path('ornicar_message_message_show', {"id": message.id}) }}">{{ message.subject|default("No subject") }}</a>
             </div>
         {% else %}
             <div class="no_messages">No messages yet</div>

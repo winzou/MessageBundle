@@ -120,6 +120,7 @@ class Message
     {
       $this->subject = $subject;
     }
+
     /**
      * @return string
      */

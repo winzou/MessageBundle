@@ -18,7 +18,7 @@
                         <a class="mark_as_read" href="{{ path('ornicar_message_message_read', {"id": message.id}) }}">Mark as read</a>
                     {% endif %}
                 </span>
-                <a class="subject" href="{{ path('ornicar_message_message_show', {"id": message.id}) }}">{{ message.subject }}</a>
+                <a class="subject" href="{{ path('ornicar_message_message_show', {"id": message.id}) }}">{{ message.subject|default("No subject") }}</a>
             </div>
         {% else %}
             <div class="no_messages">No messages yet</div>
